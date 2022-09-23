@@ -1,0 +1,94 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local MYSTIC = Instance.new("TextLabel")
+local AccUser = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.BorderColor3 = Color3.fromRGB(40, 40, 40)
+Frame.Position = UDim2.new(0, 0, -0.0310008861, 0)
+Frame.Size = UDim2.new(0, 1555, 0, 1198)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.409003198, 0, 0.585141897, 0)
+ImageLabel.Size = UDim2.new(0, 283, 0, 250)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner.CornerRadius = UDim.new(0, 100)
+UICorner.Parent = ImageLabel
+
+MYSTIC.Name = "MYSTIC"
+MYSTIC.Parent = Frame
+MYSTIC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MYSTIC.BackgroundTransparency = 1.000
+MYSTIC.Position = UDim2.new(0.43536979, 0, 0.202838063, 0)
+MYSTIC.Size = UDim2.new(0, 200, 0, 50)
+MYSTIC.Font = Enum.Font.GothamBold
+MYSTIC.Text = "Mystic Alt Control V3"
+MYSTIC.TextColor3 = Color3.fromRGB(255, 255, 255)
+MYSTIC.TextSize = 35.000
+
+AccUser.Name = "AccUser"
+AccUser.Parent = Frame
+AccUser.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AccUser.BackgroundTransparency = 1.000
+AccUser.Position = UDim2.new(0.360128641, 0, 0.38647747, 0)
+AccUser.Size = UDim2.new(0, 200, 0, 50)
+AccUser.Font = Enum.Font.GothamBold
+AccUser.Text = "Account User:"
+AccUser.TextColor3 = Color3.fromRGB(90, 90, 90)
+AccUser.TextSize = 30.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.502893865, 0, 0.386477441, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Username"
+TextLabel.TextColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel.TextSize = 30.000
+
+-- Scripts:
+
+local function ETNB_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+end
+coroutine.wrap(ETNB_fake_script)()
+local function KTZDH_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local player = game.Players.LocalPlayer
+	
+	if player then
+		script.Parent.Text = ""..player.Name..""
+	end
+end
+coroutine.wrap(KTZDH_fake_script)()
+setfpscap(3)
