@@ -1,9 +1,4 @@
 
-getgenv().Host = "XXSamuraiXX93"
-getgenv().FPS = '1'
-getgenv().Alts = {
-    83572372,
-}
 
 local Testing = false
 -- Cmds
