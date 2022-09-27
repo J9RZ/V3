@@ -1,4 +1,5 @@
-   HumanoidR.CFrame = CFrame.new(-873.083679, -38.3992119, -585.447693, 0.999960661, 4.21132782e-08, 0.00886664633, -4.16151984e-08, 1, -5.63592977e-08, -0.00886664633, 5.59880959e-08, 0.999960661)
+local HumanoidR = game.Players.LocalPlayer.Character.HumanoidRootPart
+HumanoidR.CFrame = CFrame.new(-873.083679, -38.3992119, -585.447693, 0.999960661, 4.21132782e-08, 0.00886664633, -4.16151984e-08, 1, -5.63592977e-08, -0.00886664633, 5.59880959e-08, 0.999960661)
    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Sinister Control V3', 'All')
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
