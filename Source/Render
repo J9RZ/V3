@@ -1,98 +1,87 @@
 local HumanoidR = game.Players.LocalPlayer.Character.HumanoidRootPart
 HumanoidR.CFrame = CFrame.new(-873.083679, -38.3992119, -585.447693, 0.999960661, 4.21132782e-08, 0.00886664633, -4.16151984e-08, 1, -5.63592977e-08, -0.00886664633, 5.59880959e-08, 0.999960661)
    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Sinister Control V3', 'All')
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Title_2 = Instance.new("TextLabel")
-local Title_3 = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
+local Sinister = Instance.new("TextLabel")
+local Sinister_2 = Instance.new("TextLabel")
 
 --Properties:
 
 ScreenGui.Parent = game.CoreGui
-screenGui.Enabled = true
 
 Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Frame.BorderSizePixel = 0
-Frame.Size = UDim2.new(1, 0, 1, 0)
-Frame.Visable = true
-
-Title.Name = "Title"
-Title.Parent = Frame
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.352564096, 0, 0.275308639, 0)
-Title.Size = UDim2.new(0, 242, 0, 34)
-Title.Font = Enum.Font.SourceSansBold
-Title.Text = "Developer: Joshh#2000"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextWrapped = true
-
-Title_2.Name = "Title"
-Title_2.Parent = Frame
-Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title_2.BackgroundTransparency = 1.000
-Title_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Title_2.BorderSizePixel = 0
-Title_2.Position = UDim2.new(0.314814806, 0, 0.1037037, 0)
-Title_2.Size = UDim2.new(0, 519, 0, 120)
-Title_2.Font = Enum.Font.SourceSansItalic
-Title_2.Text = "Sinister Control"
-Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_2.TextScaled = true
-Title_2.TextSize = 14.000
-Title_2.TextWrapped = true
-
-Title_3.Name = "Title"
-Title_3.Parent = Frame
-Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title_3.BackgroundTransparency = 1.000
-Title_3.BorderSizePixel = 0
-Title_3.Position = UDim2.new(0.314814806, 0, 0.233333334, 0)
-Title_3.Size = UDim2.new(0, 242, 0, 34)
-Title_3.Font = Enum.Font.SourceSansBold
-Title_3.Text = "Version: V3"
-Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_3.TextScaled = true
-Title_3.TextSize = 14.000
-Title_3.TextWrapped = true
+Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Frame.Position = UDim2.new(0, 0, -0.0365418904, 0)
+Frame.Size = UDim2.new(0, 1854, 0, 1163)
 
 ImageLabel.Parent = Frame
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.Position = UDim2.new(0.229344726, 0, 0.151851863, 0)
-ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.443905056, 0, 0.362854689, 0)
+ImageLabel.Size = UDim2.new(0, 138, 0, 124)
 ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
-UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.CornerRadius = UDim.new(0, 100)
 UICorner.Parent = ImageLabel
 
+Sinister.Name = "Sinister"
+Sinister.Parent = Frame
+Sinister.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sinister.BackgroundTransparency = 1.000
+Sinister.Position = UDim2.new(0.427184463, 0, 0.291487545, 0)
+Sinister.Size = UDim2.new(0, 200, 0, 50)
+Sinister.Font = Enum.Font.GothamBold
+Sinister.Text = "Sinster Control V3"
+Sinister.TextColor3 = Color3.fromRGB(170, 170, 170)
+Sinister.TextSize = 25.000
+
+Sinister_2.Name = "Sinister"
+Sinister_2.Parent = Frame
+Sinister_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sinister_2.BackgroundTransparency = 1.000
+Sinister_2.Position = UDim2.new(0.427184463, 0, 0.496130705, 0)
+Sinister_2.Size = UDim2.new(0, 200, 0, 50)
+Sinister_2.Font = Enum.Font.GothamBold
+Sinister_2.Text = "User"
+Sinister_2.TextColor3 = Color3.fromRGB(170, 170, 170)
+Sinister_2.TextSize = 20.000
+
 -- Scripts:
-local function KQKRD_fake_script() -- ImageLabel.LocalScript 
-    local Players = game:GetService("Players")
 
-local player = Players.LocalPlayer
+local function NHYXIKK_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
 
-local userId = player.UserId
-local thumbType = Enum.ThumbnailType.HeadShot
-local thumbSize = Enum.ThumbnailSize.Size420x420
-local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-
-local imageLabel = script.Parent
-imageLabel.Image = content
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+	
 end
-    game:GetService("RunService"):Set3dRenderingEnabled(false)
-    setfpscap(getgenv().Settings.fps)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/J9RZ/V3/main/Source/DeletedMap'))()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/J9RZ/V3/main/Source/LowGFX'))()
-    local vu = game:GetService("VirtualUser")
-    game:GetService("Players").LocalPlayer.Idled:connect(function()
-        vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-        wait(1)
-        vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-    end)
+coroutine.wrap(NHYXIKK_fake_script)()
+local function XWARYU_fake_script() -- Sinister_2.LocalScript 
+	local script = Instance.new('LocalScript', Sinister_2)
+
+	
+	local player = game.Players.LocalPlayer
+	
+	if player then
+		script.Parent.Text = "Account User: "..player.Name..""
+	end
+end
+coroutine.wrap(XWARYU_fake_script)()
